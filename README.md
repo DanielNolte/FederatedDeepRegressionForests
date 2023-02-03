@@ -6,22 +6,22 @@ Federated Deep Regression Forests are an adaption of Deep Regression Forests [1]
 
 ## Dependencies
 Python packages required to run the simulation:
--PyTorch (https://pytorch.org/)
--pandas (https://pandas.pydata.org/docs/getting_started/install.html)
--NumPy (https://numpy.org/install/)
--scikit-learn (https://scikit-learn.org/stable/install.html)
+*PyTorch (https://pytorch.org/)
+*pandas (https://pandas.pydata.org/docs/getting_started/install.html)
+*NumPy (https://numpy.org/install/)
+*scikit-learn (https://scikit-learn.org/stable/install.html)
 
 The packages can be downloaded using pip or conda
 
 The code has been tested with the following environment and versions:
-Windows 10
-NVIDIA 3080 Ti
-Cuda 11.6
-Python 3.8.5
-PyTorch 1.13.1
-pandas 1.5.3
-NumPy 1.21.0
-scikit-learn  1.2.1
+*Windows 10
+*NVIDIA 3080 Ti
+*Cuda 11.6
+*Python 3.8.5
+*PyTorch 1.13.1
+*pandas 1.5.3
+*NumPy 1.21.0
+*scikit-learn  1.2.1
 
 ## Running Instructions
 After cloning this repository, use the following commands within the CCLE_NonIID_Python directory.
