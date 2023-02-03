@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from sklearn.metrics import median_absolute_error
 from utils import NRMSE
-
+import sys
     
 class ANNCCLE(nn.Module):
     def __init__(self,opt):
@@ -117,7 +117,8 @@ class ANNCCLE(nn.Module):
                         print('Stopping Early')
                         if ~clientTrain:
                             return self,losses
-                    del RMSE, NRMSE,MAE,NMAE,PCC,R2           
+                    del RMSE, NRMSE,MAE,NMAE,PCC,R2  
+                sys.stdout.flush()
         torch.cuda.empty_cache()
 
         return self,losses
@@ -418,7 +419,8 @@ class CNNCCLE(nn.Module):
                         print('Stopping Early')
                         if ~clientTrain:
                             return self,losses
-                    del RMSE, NRMSE,MAE,NMAE,PCC,R2           
+                    del RMSE, NRMSE,MAE,NMAE,PCC,R2     
+                sys.stdout.flush()
         torch.cuda.empty_cache()
 
         return self,losses

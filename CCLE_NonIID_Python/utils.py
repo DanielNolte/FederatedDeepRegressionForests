@@ -14,9 +14,9 @@ import os
 def parse_arg():
     parser = argparse.ArgumentParser(description='runSim.py')
     ## paths
-    parser.add_argument('-data_path', type=str, default='C:/Users/Daniel/OneDrive - Texas Tech University/Docs/GitHub/Sandbox2/FLSim/FedDRFSim/data/CCLE')
+    parser.add_argument('-data_path', type=str, default='../data/CCLE')
     parser.add_argument('-mapping', type=str, default='Init')
-    parser.add_argument('-save_dir', type=str, default='trainedModels3_')
+    parser.add_argument('-save_dir', type=str, default='trainedModels_')
     parser.add_argument('-save_name', type=str, default='trained_model') 
     ##-----------------------------------------------------------------------##
     ## ## training & model settings 
@@ -24,7 +24,7 @@ def parse_arg():
     parser.add_argument('-train_central', type=bool, default=False)
     parser.add_argument('-eval', type=bool, default=False) 
     parser.add_argument('-eval_central', type=bool, default=False)
-    parser.add_argument('-model_type', type=str, default='ANN') 
+    parser.add_argument('-model_type', type=str, default='FedDRF') 
     parser.add_argument('-iid', type=int, default=2)
     parser.add_argument('-batch_size', type=int, default=32)
     parser.add_argument('-eval_batch_size', type=int, default=1000)

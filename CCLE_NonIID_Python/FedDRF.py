@@ -16,6 +16,7 @@ from utils import NRMSE
 import resnet
 from torch.nn.parameter import Parameter
 from collections import OrderedDict
+import sys
 # smallest positive float number
 FLT_MIN = float(np.finfo(np.float32).eps)
 FLT_MAX = float(np.finfo(np.float32).max)
@@ -403,6 +404,7 @@ class FedDRF(nn.Module):
             self.model.train()
             training_generator = DataLoader(train,pin_memory=True, **params)
             print("Epoch %d : Update Neural Weights"%(epoch))
+            sys.stdout.flush()
             for idx,sample in enumerate(training_generator):
                 
                 data = sample['data']
@@ -457,6 +459,7 @@ class FedDRF(nn.Module):
                     if self.opt.cuda:
                         self.model = self.model.cuda()
                     print('Val NRMSE:'+str(NRMSE))
+                    sys.stdout.flush()
                     # update learning rate
                     if clientTrain == False:
                         self.sche.step(RMSE)
@@ -473,6 +476,7 @@ class FedDRF(nn.Module):
                         if ~clientTrain:
                             return self,losses
                     del RMSE,NRMSE,CNN_MedAE,NMAE,PCC,CNN_R2
+                
         del training_generator,val,train           
         torch.cuda.empty_cache()
         gc.collect()
