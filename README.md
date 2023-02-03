@@ -25,28 +25,29 @@ scikit-learn  1.2.1
 
 ## Running Instructions
 After cloning this repository, use the following commands within the CCLE_NonIID_Python directory.
-# To run federated training:
+
+To run federated training:
 ```
 python runSim.py -train True -model_type 'FedDRF' -iid 8
 ```
-# To evaluate the federated model:
+To evaluate the federated model:
 ```
 python runSim.py -train False -eval True -model_type 'FedDRF' -iid 8
 ```
-# To train a centralized version of the model:
+To train a centralized version of the model:
 ```
 python runSim.py -train False -train_central True -model_type 'FedDRF' -iid 8
 ```
-# To evaluate the centralized version of the model:
+To evaluate the centralized version of the model:
 ```
 python runSim.py -train False -eval_central True -model_type 'FedDRF' -iid 8
 ```
 ## Optional Parameters (Defaults)
-# Paths
+Paths
 -data_path ('../data/CCLE'): Path to CCLE data
 -save_dir ('trainedModels_'): Directory to save trained models and validation results
 -save_name ('trained_model'): Name of saved files
-# Training & Model Settings 
+Training & Model Settings 
 -train (True): Boolean to perform federated training or not
 -train_central (False): Boolean to perform centralized training or not
 -eval (False): Boolean to perform federated evaluation or not
@@ -61,12 +62,12 @@ python runSim.py -train False -eval_central True -model_type 'FedDRF' -iid 8
 -epochs (200): Max number of epochs
 -num_threads (0): Number of threads to use when loading data
 -randomSeed (2022): Random seed for data partition
-# FedDRF Model Parameters 
+FedDRF Model Parameters 
 -num_output (150) : Neural feature output size for forest 
 -n_tree (10): Number of trees in forest
 -tree_depth (7): Depth of trees
 -label_iter_time (10): Number of iterations for updating leaf node parameters
-# Optimizer Settings
+Optimizer Settings
 -lr (.001): Learning rate
 -EStol (.0001): Early stopping tolerance
 -ESpat (8): Early stopping patience
