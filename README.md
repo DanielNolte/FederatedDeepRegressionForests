@@ -1,9 +1,6 @@
 # FederatedDeepRegressionForests: Federated Learning Framework integrating REFINED CNN and Deep Regression Forests
 Federated Deep Regression Forests are an adaption of Deep Neural Decision Forests [[1](https://doi.org/10.1109/ICCV.2015.172)] for regression [[2](https://doi.org/10.1109/CVPR.2018.00245)] in the federated setting. This repository contains a PyTorch implementation of Federated Deep Regression Forests and scripts to run a federated simulation. The simulations can be used for training and evaluating different models on the Cancer Cell Line Encyclopedia (CCLE) [[3](https://depmap.org/portal/download/)] dataset with varying degree of heterogeneity among the clients. The initial deep regression code was acquired from [[4](https://github.com/Nicholasli1995/VisualizingNDF)] and extended to a federated framework simulation with additional competing models.
 
-## Data Partitioning & Competing Models
-
-
 ## Dependencies
 Python packages required to run the simulation:
 * PyTorch (https://pytorch.org/)
@@ -51,6 +48,8 @@ python runSim.py -train False -eval_central True -model_type 'FedDRF' -iid 8
 -model_type ('FedDRF'): Model to train, ('ANN', 'CNN', 'FedDRF')
 -iid (2): Parameter to control heterogeneity of federated dataset, can be varied from 2-24 
 ```
+Parameters train, train_central, eval, and eval_central are all Booleans that control the behavior of the simulation (i.e. whether to perform training or evaluation in the centralized or federated setting). The model_type parameter selects the model to train or evaluate and the iid parameter controls the heterogeneity of samples across clients with 2 being fully disjoint and 24 being a completely equal distribution. 
+
 ## Optional Parameters (Defaults)
 Paths
 ```
