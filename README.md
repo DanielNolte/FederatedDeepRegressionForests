@@ -84,5 +84,3 @@ Optimizer Settings
 ```
 ## Output Files
 When running the script to train the models, the models and their validation progress will be saved into a folder in the working directory. All other outputs are printed to the console.
-
-## Citation
