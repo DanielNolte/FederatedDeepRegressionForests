@@ -1,5 +1,5 @@
 # FederatedDeepRegressionForests: Federated Learning Framework integrating REFINED CNN and Deep Regression Forests
-Federated Deep Regression Forests are an adaption of Deep Neural Decision Forests [[1](https://doi.org/10.1109/ICCV.2015.172)] for regression [[2](https://doi.org/10.1109/CVPR.2018.00245)] in the federated setting. This repository contains a PyTorch implementation of Federated Deep Regression Forests and scripts to run a federated simulation. The simulations can be used for training and evaluating different models on the Cancer Cell Line Encyclopedia (CCLE) [[3](https://depmap.org/portal/download/)] dataset with varying degree of heterogeneity among the clients. The initial deep regression code was acquired from [[4](https://github.com/Nicholasli1995/VisualizingNDF)] and extended to a federated framework simulation with additional competing models.
+Federated Deep Regression Forests are an adaption of Deep Neural Decision Forests [[1](https://doi.org/10.1109/ICCV.2015.172)] for regression [[2](https://doi.org/10.1109/CVPR.2018.00245)] in the federated setting. This repository contains a PyTorch implementation of Federated Deep Regression Forests and scripts to run a federated simulation. The simulations can be used for training and evaluating different models on the Cancer Cell Line Encyclopedia (CCLE) [[3](https://depmap.org/portal/download/)] dataset with varying degrees of heterogeneity among the clients. The initial deep regression code was acquired from [[4](https://github.com/Nicholasli1995/VisualizingNDF)] and extended to a federated framework simulation with additional competing models.
 
 ## Dependencies
 Python packages required to run the simulation:
@@ -70,8 +70,8 @@ Training & Model Settings
 ```
 FedDRF Model Parameters 
 ```
--num_output (150) : Neural feature output size for forest 
--n_tree (10): Number of trees in forest
+-num_output (150): Neural feature output size for forest 
+-n_tree (10): Number of trees in the forest
 -tree_depth (7): Depth of trees
 -label_iter_time (10): Number of iterations for updating leaf node parameters
 ```
@@ -84,3 +84,7 @@ Optimizer Settings
 ```
 ## Output Files
 When running the script to train the models, the models and their validation progress will be saved into a folder in the working directory. All other outputs are printed to the console.
+
+## Citation
+If you find this package useful and end up using it, please cite the following work:
+1) Nolte, D., Bazgir, O., Ghosh, S., & Pal, R. (2023). Federated learning framework integrating REFINED CNN and Deep Regression Forests. Bioinformatics advances, 3(1), vbad036. https://doi.org/10.1093/bioadv/vbad036
