@@ -1,4 +1,4 @@
-# FederatedDeepRegressionForests: Federated Learning Framework integrating REFINED CNN and Deep Regression Forests
+# Federated Deep Regression Forests: Federated Learning Framework integrating REFINED CNN and Deep Regression Forests
 Federated Deep Regression Forests are an adaption of Deep Neural Decision Forests [[1](https://doi.org/10.1109/ICCV.2015.172)] for regression [[2](https://doi.org/10.1109/CVPR.2018.00245)] in the federated setting. This repository contains a PyTorch implementation of Federated Deep Regression Forests and scripts to run a federated simulation. The simulations can be used for training and evaluating different models on the Cancer Cell Line Encyclopedia (CCLE) [[3](https://depmap.org/portal/download/)] dataset with varying degrees of heterogeneity among the clients. The initial deep regression code was acquired from [[4](https://github.com/Nicholasli1995/VisualizingNDF)] and extended to a federated framework simulation with additional competing models.
 
 ## Dependencies
